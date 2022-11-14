@@ -1,0 +1,333 @@
+/* PORTFOLIO */
+.s3 {
+  /* z-index: -1; */
+  /* jako element elastyczny */
+  flex-grow: 1;
+  /* kontener flex */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.s3 > h1 {
+  font-family: "Major Mono Display", monospace;
+  border-bottom: 2px solid black;
+  font-size: 4rem;
+  text-align: right;
+  margin: 0;
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.s3 > div {
+  flex-basis: 18%;
+  cursor: pointer;
+  position: relative;
+  margin: 50px 30px 50px 0;
+}
+
+.s3 div img {
+  width: 100%;
+}
+.s3 div.napis {
+  /* position: relative; */
+  width: 100px;
+  flex-basis: 10%;
+  cursor: default;
+}
+.s3 div.napis > h1 {
+  /* position: relative; */
+  /* top: 0; */
+  /* left: 0; */
+  position: absolute;
+  top: 50%;
+  left: -140%;
+  /* transform-origin: 180px 150px; */
+  width: 394px;
+  transform: rotate(-90deg);
+  display: block;
+  font-family: "Major Mono Display", monospace;
+  border-bottom: 2px solid black;
+  font-size: 4rem;
+  text-align: right;
+}
+
+.s3 div.kaseton h1,
+.s3 div.litery h1,
+.s3 div.folie h1,
+.s3 div.inne h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Khula", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .s3 div.kaseton h1,
+  .s3 div.litery h1,
+  .s3 div.folie h1,
+  .s3 div.inne h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 823px) {
+  .s3 > h1 {
+    margin: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    visibility: initial;
+  }
+  .s3 > div {
+    flex-basis: 20%;
+    margin: 30px 15px 30px 15px;
+  }
+
+  .s3 div img {
+    width: 100%;
+  }
+  .s3 div.napis {
+    /* position: relative; */
+    width: 0;
+    flex-basis: 0;
+    cursor: default;
+    margin: 0;
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .s3 div.napis > h1 {
+    width: 0px;
+    transform: rotate(0deg);
+    border-bottom: 0px solid black;
+    font-size: 0rem;
+  }
+  .s3 div.kaseton h1,
+  .s3 div.litery h1,
+  .s3 div.folie h1,
+  .s3 div.inne h1 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .s3 > div {
+    flex-basis: 40%;
+    margin: 30px 15px 30px 15px;
+  }
+  .s3 div.kaseton h1,
+  .s3 div.litery h1,
+  .s3 div.folie h1,
+  .s3 div.inne h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .s3 div.kaseton h1,
+  .s3 div.litery h1,
+  .s3 div.folie h1,
+  .s3 div.inne h1 {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 411px) {
+  .s3 > h1 {
+    font-size: 3rem;
+  }
+  .s3 div.kaseton h1,
+  .s3 div.litery h1,
+  .s3 div.folie h1,
+  .s3 div.inne h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 360px) {
+  .s3 div.kaseton h1,
+  .s3 div.litery h1,
+  .s3 div.folie h1,
+  .s3 div.inne h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Galeria */
+
+.gallery,
+.galKaseton,
+.galLitery,
+.galFit,
+.galInne {
+  position: relative;
+  /* z-index: 9; */
+  /* left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; */
+  max-width: 9999px;
+  overflow: visible;
+  visibility: visible;
+  transition: 0.3s linear;
+}
+.off {
+  /* left: 0;
+  bottom: 0; */
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.x,
+.xKaseton,
+.xLitery,
+.xFit,
+.xInne {
+  width: 60px;
+  height: 60px;
+  opacity: 0.6;
+  background-color: #ae256c;
+  border-radius: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  font-family: tahoma;
+  cursor: pointer;
+  /* border: 2px solid grey; */
+  /* border-radius: 50%; */
+  color: white;
+  font-size: 40px;
+  z-index: 10;
+  /* animacja */
+  animation: obracanie 2s infinite alternate;
+}
+@keyframes obracanie {
+  0% {
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  /* flex-direction: row; */
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* obsługa */
+}
+
+.images a {
+  position: relative;
+  overflow: hidden;
+  /* flex-shrink: 1; */
+  /* flex-basis: 20%; */
+  flex-basis: calc(18% - 15px);
+  /* height: 20%; */
+  margin: 15px 15px;
+  background-color: transparent;
+  /* border-radius: 50%; */
+  /* box-shadow: 0 0 3px 3px gray; */
+}
+
+.images img {
+  /* position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* min-width: 100%;
+  min-height: 100%; */
+  width: 100%;
+}
+
+@media (max-width: 823px) {
+  .images a {
+    flex-basis: calc(23% - 15px);
+    margin: 15px 15px;
+  }
+}
+@media (max-width: 768px) {
+  .images a {
+    flex-basis: calc(22% - 15px);
+    margin: 15px 15px;
+  }
+}
+@media (max-width: 640px) {
+  .images a {
+    flex-basis: calc(30% - 15px);
+    margin: 15px 15px;
+  }
+}
+@media (max-width: 568px) {
+  .images a {
+    flex-basis: calc(28% - 15px);
+    margin: 15px 15px;
+  }
+}
+@media (max-width: 411px) {
+  .images a {
+    flex-basis: calc(44% - 15px);
+    margin: 15px 15px;
+  }
+}
+
+/* Portfolio dół */
+
+div.portfolioDown {
+  position: relative;
+
+  /* kontener flex */
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  height: auto;
+  background-color: rgb(136, 136, 136);
+}
+div.portfolioDown > div.work {
+  flex-basis: 40%;
+  text-align: left;
+  position: relative;
+  /* border: 1px solid white; */
+  display: flex;
+  /* height: 150px; */
+  color: white;
+  margin: 20px 15px;
+}
+div.portfolioDown > div.work > div.icon {
+  padding: 10px 0 0 10px;
+}
+div.portfolioDown > div.work > div.text > h2 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin: 10px 0 20px 20px;
+}
+div.portfolioDown > div.work > div.text > p {
+  font-size: 1.3rem;
+  padding: 0 20px;
+}
+@media (max-width: 668px) {
+  div.portfolioDown {
+    flex-direction: column;
+  }
+}

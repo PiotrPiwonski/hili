@@ -1,0 +1,148 @@
+/* OFFER */
+.s2 {
+  background-color: rgb(235, 235, 235);
+  /* min-height: 80vh; */
+}
+div.offerWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 550px;
+}
+div.offerWrapper div:nth-child(1) {
+  position: relative;
+  flex-basis: 15%;
+  display: block;
+}
+div.offerWrapper div:nth-child(1) h1 {
+  position: absolute;
+  top: 50%;
+  left: -122%;
+  width: 507px;
+  transform: rotate(-90deg);
+  display: block;
+  font-family: "Major Mono Display", monospace;
+  border-bottom: 2px solid black;
+  font-size: 4rem;
+  text-align: right;
+}
+div.offerWrapper div:nth-child(2) {
+  position: relative;
+  flex-basis: 35%;
+  padding: 30px 20px 30px 0;
+  display: block;
+}
+div.offerWrapper div:nth-child(2) p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+div.offerWrapper div:nth-child(3) {
+  position: relative;
+  flex-basis: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  /* background-image: url(../images/letters.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; */
+}
+div.offerWrapper div:nth-child(3) img {
+  /* height: 100%; */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  */
+}
+
+@media (max-width: 1024px) {
+  div.offerWrapper div:nth-child(2) {
+    flex-basis: 40%;
+  }
+  div.offerWrapper div:nth-child(3) {
+    flex-basis: 45%;
+  }
+}
+@media (max-width: 823px) {
+  div.offerWrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  div.offerWrapper div:nth-child(1) {
+    margin: 10px 30px;
+  }
+  div.offerWrapper div:nth-child(1) h1 {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    transform: rotate(0deg);
+  }
+  div.offerWrapper div:nth-child(2) {
+    flex-basis: 65%;
+    margin: 10px 30px;
+    padding: 30px 20px 30px 0;
+  }
+  div.offerWrapper div:nth-child(2) p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+  div.offerWrapper div:nth-child(3) {
+    position: relative;
+    flex-basis: 0%;
+    overflow: hidden;
+    height: 0;
+  }
+}
+@media (max-width: 411px) {
+  div.offerWrapper div:nth-child(1) h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Oferta dół */
+
+div.offerDown {
+  position: relative;
+  flex-grow: 1;
+  /* kontener flex */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  height: auto;
+  background-color: rgb(136, 136, 136);
+}
+div.offerDown div {
+  flex-basis: 25%;
+  text-align: center;
+  position: relative;
+  /* border: 1px solid white; */
+  height: auto;
+  color: white;
+  margin: 20px 0;
+}
+div.offerDown div img {
+  margin-bottom: 20px;
+}
+div.offerDown div h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+div.offerDown div p {
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 668px) {
+  div.offerDown {
+    flex-direction: column;
+  }
+}
